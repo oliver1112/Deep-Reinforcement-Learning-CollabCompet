@@ -11,7 +11,9 @@ The mission is episodic. In order to solve the environment, your agent must get 
 
 ## Instructions
 This project implement a multi-agent reinforcement learning method called Multi Agent Deep Deterministic Policy Gradient (MADDPG). DDPG is an Actor-Critic algorithm which concurrently learns a Q-function and a policy. And MADDPG expands DDPG algorithm in multiagent environments for centralized learning and decentralized execution, allowing agents to learn to collaborate and compete with each other. Refer the paper [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275) or [the openAI blog](https://openai.com/blog/learning-to-cooperate-compete-and-communicate) to see more MADDPG algrithm details.
-<div align="center"><img width="65" height="75" src="https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/screenshot.png"/></div>
+<div align="center"><img width="600" height="400" src="https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/screenshot.png"/></div>
+
+This screenshot is taken from the OpenAI blog.
 
 And refer the Report file to see my hyperparameters details, along with ideas for future work.
 
