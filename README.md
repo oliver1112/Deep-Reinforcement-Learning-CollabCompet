@@ -18,9 +18,9 @@ This project implement a multi-agent reinforcement learning method called Multi 
 
 This screenshot is taken from the OpenAI blog.
 
-And refer the Report file to see my hyperparameters details, along with ideas for future work.
+And refer [the Report file](https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/Report.md) to see my hyperparameters details, along with ideas for future work.
 
-Follow the code in the ipynb file in order to train the agent.
+Follow the code in [the ipynb file](https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/Tennis.ipynb) in order to train the agent.
 
 The algorithm is written in PyTorch and Python 3
 
