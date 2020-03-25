@@ -9,6 +9,9 @@ The observation space consists of 8 variables corresponding to the position and 
 ### Solving condition
 The mission is episodic. In order to solve the environment, your agent must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).
 
+As my trained multiagent shown below, two tennis racket collaborate to hit the ball over the net and keep it in play
+![My Trained Agent](https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/trained_agent.gif)
+
 ## Instructions
 This project implement a multi-agent reinforcement learning method called Multi Agent Deep Deterministic Policy Gradient (MADDPG). DDPG is an Actor-Critic algorithm which concurrently learns a Q-function and a policy. And MADDPG expands DDPG algorithm in multiagent environments for centralized learning and decentralized execution, allowing agents to learn to collaborate and compete with each other. Refer the paper [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275) or [the openAI blog](https://openai.com/blog/learning-to-cooperate-compete-and-communicate) to see more MADDPG algrithm details.
 <div align="center"><img width="600" height="400" src="https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/screenshot.png"/></div>
