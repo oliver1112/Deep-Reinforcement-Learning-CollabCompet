@@ -4,7 +4,9 @@
 Deep Deterministic Policy Gradient(DDPG) algorithm uses four neural networks: a Q network, a deterministic policy network, a target Q network, and a target policy network to solve continuous control problem. And Multi Agent Deep Deterministic Policy Gradient(MADDPG) is a variant of DDPG used in multiagent environment.
 
 <div align="center"><img width="600" height="400" src="https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/screenshot.png"/></div>
+
 (screenshot from [the paper](https://arxiv.org/abs/1706.02275))
+
 > we accomplish our goal by adopting the framework of centralized training with decentralized execution. Thus, we allow the policies to use extra information to ease training, so long as this information is not used at test time. It is unnatural to do this with Q-learning, as the Q function generally cannot contain different information at training and test time. Thus, we propose a simple extension of actor-critic policy gradient methods where the critic is augmented with extra information about the policies of other agents.
 
 In brief, the agents do not need to access the central critic during the test; they will act based on their own observations and predictions of other agents' behavior. Since centralized critics can be learned independently for each agent, MADDPG can also be used to model arbitrary reward structures between agents, including adversarial cases.
