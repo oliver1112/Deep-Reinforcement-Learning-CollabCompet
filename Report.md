@@ -13,12 +13,36 @@ In brief, the agents do not need to access the central critic during the test; t
 
 ### Hyperparameters
 ```
+action_size=2
+n_agents=2
+buffer_size=10000
+batch_size=256
+gamma=0.99
+lr_actor=1e-4
+lr_critic=1e-3
+tau=1e-3
+update_every=2
+mu=0                     #OU-noise parameter
+theta=0.15               #OU-noise parameter
+sigma=0.1                #OU-noise parameter
 ```
-The actor neural networks use the following architecture:
+Two agents trained with the same size network, and the experience was added to a shared replay buffer. The actor neural networks use the following architecture:
 ```
+ActorModel(
+  (fc1): Linear(in_features=24, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+  (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
 ```
 The critic neural networks use the following architecture:
 ```
+CriticModel(
+  (fc1): Linear(in_features=52, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=1, bias=True)
+  (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
 ```
 
 ### Pseudocode
@@ -26,6 +50,10 @@ The critic neural networks use the following architecture:
 This MADDPG Pseudocode screenshot is taken from [the paper](https://arxiv.org/abs/1706.02275)
 
 ## Plot of Rewards
+The Environment solved in 2863 episodes, which means it receive an average reward (over 100 episodes) of at least 0.5
+
+The reward changes with the number of episode as shown below, the blue line is the score change with episode, while the orange one is the average score. 
+![](https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/score.png)
 
 As my trained multiagent shown below, two tennis racket collaborate to hit the ball over the net and keep it in play
 ![My Trained Agent](https://github.com/oliver1112/Deep-Reinforcement-Learning-CollabCompet/blob/master/assets/trained_agent.gif)
